@@ -36,76 +36,73 @@
     <script src="https://code.jquery.com/jquery-2.2.4.js" ></script>
 
     <div class="tab-wrap">
-        <input id="TAB-01" type="radio" name="TAB" class="tab-switch" checked="checked" /><label class="tab-label" for="TAB-01">IT</label>
-        <div class="tab-content">
-            <p id="inbox"></p>
-            <script>
+
+    <input id="TAB-01" type="radio" name="TAB" class="tab-switch" checked="checked" /><label class="tab-label" for="TAB-01">IT</label>
+    <div class="tab-content">
+    <p id="inbox"></p>
+    <script>
+        function func_a(url,place){
+
             $.ajax({
 
                 url:'./cgi-bin/sample.py',
                 type:'POST',
-                data:{sent:"https://news.yahoo.co.jp/categories/it",sent2:"a"}
+                data:{sent:url,sent2:"a"}
             })
             .done(function(data){
-                var smp=document.getElementById("inbox");
+                var smp=document.getElementById(place);
                 smp.innerHTML = data;
     
             })
             .fail(function(){
-                var smp=document.getElementById("inbox");
+                var smp=document.getElementById(place);
                 smp.innerHTML = "failed";
             });
     
+                    }
+                    let url ="https://news.yahoo.co.jp/categories/it";
+        let place ="inbox";
 
-        </script>
+        func_a(url,place);
+
+    </script>
             
     </div>
     <input id="TAB-02" type="radio" name="TAB" class="tab-switch" /><label class="tab-label" for="TAB-02">エンターテインメント</label>
-        <div class="tab-content">
-            <p id="inbox2"></p>
-            <script>
-            $.ajax({
+    <div class="tab-content">
+    <p id="inbox2"></p>
+    <script>
+        url ="https://news.yahoo.co.jp/categories/entertainment";
+        place ="inbox2";
 
-                url:'./cgi-bin/sample.py',
-                type:'POST',
-                data:{sent:"https://news.yahoo.co.jp/categories/entertainment",sent2:"a"}
-            })
-            .done(function(data){
-                var smp=document.getElementById("inbox2");
-                smp.innerHTML = data;
-    
-            })
-            .fail(function(){
-                var smp=document.getElementById("inbox2");
-                smp.innerHTML = "failed";
-            });
-    
+        func_a(url,place);
 
-        </script>
+    </script>
     </div>
+
     <input id="TAB-03" type="radio" name="TAB" class="tab-switch" /><label class="tab-label" for="TAB-03">スポーツ</label>
-        <div class="tab-content">
-            <p id="inbox3"></p>
-            <script>
-            $.ajax({
+    <div class="tab-content">
+    <p id="inbox3"></p>
+    <script>
+        url ="https://news.yahoo.co.jp/categories/sports";
+        place ="inbox3";
 
-                url:'./cgi-bin/sample.py',
-                type:'POST',
-                data:{sent:"https://news.yahoo.co.jp/categories/sports",sent2:"a"}
-            })
-            .done(function(data){
-                var smp=document.getElementById("inbox3");
-                smp.innerHTML = data;
-    
-            })
-            .fail(function(){
-                var smp=document.getElementById("inbox3");
-                smp.innerHTML = "failed";
-            });
-    
-
-        </script>
+        func_a(url,place);
+    </script>
     </div>
+
+    <input id="TAB-04" type="radio" name="TAB" class="tab-switch" /><label class="tab-label" for="TAB-04">国内</label>
+    <div class="tab-content">
+    <p id="inbox4"></p>
+    <script>
+        url ="https://news.yahoo.co.jp/categories/domestic";
+        place ="inbox4";
+
+        func_a(url,place);
+    </script>
+    </div>
+
+
 
     </div>
 
