@@ -37,11 +37,28 @@
 
     <div class="tab-wrap">
 
-    <input id="TAB-01" type="radio" name="TAB" class="tab-switch" checked="checked" />
-    <label class="tab-label" for="TAB-01">IT</label>
-    <div class="tab-content">
-    <p id="inbox"></p>
+
+
     <script>
+        function func_html(tabno,kindname,inname){
+
+            document.write("<input id=");
+            document.write(tabno); 
+            document.write(" type=\"radio\" name=\"TAB\" class=\"tab-switch\" checked=\"checked\" />");
+            document.write("<label class=\"tab-label\" for=");
+            document.write(tabno);
+            document.write(">");
+            document.write(kindname);
+            document.write("</label>");
+
+            document.write("<div class=\"tab-content\">");
+            document.write("<p id=");
+            document.write(inname);
+            document.write("></p>");
+
+
+        }
+
         function func_a(url,place){
 
             $.ajax({
@@ -61,7 +78,14 @@
             });
     
                     }
-                    let url ="https://news.yahoo.co.jp/categories/it";
+
+        let tabno="TAB-01";
+        let kindname="IT";   
+        let inname="inbox"         
+        func_html(tabno,kindname,inname)
+
+
+        let url ="https://news.yahoo.co.jp/categories/it";
         let place ="inbox";
 
         func_a(url,place);
@@ -69,11 +93,13 @@
     </script>
             
     </div>
-    <input id="TAB-02" type="radio" name="TAB" class="tab-switch" />
-    <label class="tab-label" for="TAB-02">エンターテインメント</label>
-    <div class="tab-content">
-    <p id="inbox2"></p>
     <script>
+        tabno="TAB-02";
+        kindname="エンターテインメント";   
+        inname="inbox2"         
+        func_html(tabno,kindname,inname)
+
+
         url ="https://news.yahoo.co.jp/categories/entertainment";
         place ="inbox2";
 
@@ -82,11 +108,12 @@
     </script>
     </div>
 
-    <input id="TAB-03" type="radio" name="TAB" class="tab-switch" />
-    <label class="tab-label" for="TAB-03">スポーツ</label>
-    <div class="tab-content">
-    <p id="inbox3"></p>
     <script>
+        tabno="TAB-03";
+        kindname="スポーツ";   
+        inname="inbox3";         
+        func_html(tabno,kindname,inname)
+
         url ="https://news.yahoo.co.jp/categories/sports";
         place ="inbox3";
 
@@ -94,11 +121,12 @@
     </script>
     </div>
 
-    <input id="TAB-04" type="radio" name="TAB" class="tab-switch" />
-    <label class="tab-label" for="TAB-04">国内</label>
-    <div class="tab-content">
-    <p id="inbox4"></p>
     <script>
+        tabno="TAB-04";
+        kindname=">国内";   
+        inname="inbox4" ;        
+        func_html(tabno,kindname,inname)
+
         url ="https://news.yahoo.co.jp/categories/domestic";
         place ="inbox4";
 
@@ -107,11 +135,12 @@
     </div>
 
 
-    <input id="TAB-05" type="radio" name="TAB" class="tab-switch" />
-    <label class="tab-label" for="TAB-05">経済</label>
-    <div class="tab-content">
-    <p id="inbox5"></p>
     <script>
+        tabno="TAB-05";
+        kindname="経済";   
+        inname="inbox5" ;        
+        func_html(tabno,kindname,inname)
+
         url ="https://news.yahoo.co.jp/categories/business";
         place ="inbox5";
 
