@@ -40,6 +40,11 @@
 
 
     <script>
+
+        var tabtable = ["TAB-01","TAB-02","TAB-03","TAB-04","TAB-05"];
+        var kindnametable=["IT","エンターテインメント","スポーツ","国内","経済"];
+        var innametable=["inbox1","inbox2","inbox3","inbox4","inbox5"];
+        
         function func_html(tabno,kindname,inname){
 
             document.write("<input id=");
@@ -78,77 +83,79 @@
             });
     
                     }
+    </script>
 
-        let tabno="TAB-01";
-        let kindname="IT";   
-        let inname="inbox"         
+
+    <script>
+        let tabno=tabtable[0];
+        let kindname=kindnametable[0];   
+        let inname=innametable[0];         
         func_html(tabno,kindname,inname)
 
 
         let url ="https://news.yahoo.co.jp/categories/it";
-        let place ="inbox";
+        let place =innametable[0];
 
         func_a(url,place);
 
+        document.write("</div>");
+
     </script>
             
-    </div>
     <script>
-        tabno="TAB-02";
-        kindname="エンターテインメント";   
-        inname="inbox2"         
+        tabno=tabtable[1];
+        kindname=kindnametable[1];   
+        inname=innametable[1];         
         func_html(tabno,kindname,inname)
 
 
         url ="https://news.yahoo.co.jp/categories/entertainment";
-        place ="inbox2";
+        place =innametable[1];
 
         func_a(url,place);
+        document.write("</div>");
 
     </script>
-    </div>
 
     <script>
-        tabno="TAB-03";
-        kindname="スポーツ";   
-        inname="inbox3";         
+        tabno=tabtable[2];
+        kindname=kindnametable[2];   
+        inname=innametable[2];         
         func_html(tabno,kindname,inname)
 
         url ="https://news.yahoo.co.jp/categories/sports";
-        place ="inbox3";
+        place =innametable[2];
 
         func_a(url,place);
+        document.write("</div>");
     </script>
-    </div>
 
     <script>
-        tabno="TAB-04";
-        kindname=">国内";   
-        inname="inbox4" ;        
+        tabno=tabtable[3];
+        kindname=kindnametable[3];   
+        inname=innametable[3] ;        
         func_html(tabno,kindname,inname)
 
         url ="https://news.yahoo.co.jp/categories/domestic";
-        place ="inbox4";
+        place =innametable[3];
 
         func_a(url,place);
+        document.write("</div>");
     </script>
-    </div>
 
 
     <script>
-        tabno="TAB-05";
-        kindname="経済";   
-        inname="inbox5" ;        
+        tabno=tabtable[4];
+        kindname=kindnametable[4];   
+        inname=innametable[4] ;        
         func_html(tabno,kindname,inname)
 
         url ="https://news.yahoo.co.jp/categories/business";
-        place ="inbox5";
+        place =innametable[4];
 
         func_a(url,place);
+        document.write("</div>");
     </script>
-    </div>
-
-
 
     </div>
 
