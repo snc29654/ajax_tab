@@ -44,6 +44,11 @@
         var tabtable = ["TAB-01","TAB-02","TAB-03","TAB-04","TAB-05"];
         var kindnametable=["IT","エンターテインメント","スポーツ","国内","経済"];
         var innametable=["inbox1","inbox2","inbox3","inbox4","inbox5"];
+        var urltable=["https://news.yahoo.co.jp/categories/it",
+        "https://news.yahoo.co.jp/categories/entertainment",
+        "https://news.yahoo.co.jp/categories/sports",
+        "https://news.yahoo.co.jp/categories/domestic",
+        "https://news.yahoo.co.jp/categories/business"];
         
         function func_html(tabno,kindname,inname){
 
@@ -87,75 +92,26 @@
 
 
     <script>
-        let tabno=tabtable[0];
-        let kindname=kindnametable[0];   
-        let inname=innametable[0];         
+    for (let i = 0; i < 5; i++) {
+  
+
+
+        let tabno=tabtable[i];
+        let kindname=kindnametable[i];   
+        let inname=innametable[i];         
         func_html(tabno,kindname,inname)
 
 
-        let url ="https://news.yahoo.co.jp/categories/it";
-        let place =innametable[0];
+        let url =urltable[i];
+        let place =innametable[i];
 
         func_a(url,place);
 
         document.write("</div>");
+    }    
 
     </script>
             
-    <script>
-        tabno=tabtable[1];
-        kindname=kindnametable[1];   
-        inname=innametable[1];         
-        func_html(tabno,kindname,inname)
-
-
-        url ="https://news.yahoo.co.jp/categories/entertainment";
-        place =innametable[1];
-
-        func_a(url,place);
-        document.write("</div>");
-
-    </script>
-
-    <script>
-        tabno=tabtable[2];
-        kindname=kindnametable[2];   
-        inname=innametable[2];         
-        func_html(tabno,kindname,inname)
-
-        url ="https://news.yahoo.co.jp/categories/sports";
-        place =innametable[2];
-
-        func_a(url,place);
-        document.write("</div>");
-    </script>
-
-    <script>
-        tabno=tabtable[3];
-        kindname=kindnametable[3];   
-        inname=innametable[3] ;        
-        func_html(tabno,kindname,inname)
-
-        url ="https://news.yahoo.co.jp/categories/domestic";
-        place =innametable[3];
-
-        func_a(url,place);
-        document.write("</div>");
-    </script>
-
-
-    <script>
-        tabno=tabtable[4];
-        kindname=kindnametable[4];   
-        inname=innametable[4] ;        
-        func_html(tabno,kindname,inname)
-
-        url ="https://news.yahoo.co.jp/categories/business";
-        place =innametable[4];
-
-        func_a(url,place);
-        document.write("</div>");
-    </script>
 
     </div>
 
